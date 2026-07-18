@@ -7,6 +7,7 @@ plugins {
     id("com.android.application")
     id("io.sentry.android.gradle")
     id("flipper.lint")
+    id("flipper.build-cache")
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
