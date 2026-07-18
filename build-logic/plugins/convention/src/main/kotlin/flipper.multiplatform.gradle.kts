@@ -6,6 +6,7 @@ plugins {
     id("com.android.kotlin.multiplatform.library")
     id("flipper.lint")
     id("flipper.kotlin-flags")
+    id("flipper.build-cache")
 }
 
 kotlin {

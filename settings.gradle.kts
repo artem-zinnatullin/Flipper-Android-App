@@ -23,7 +23,7 @@ buildCache {
     remote<HttpBuildCache> {
         isEnabled = providers.gradleProperty("flipper_buildfetch_token").isPresent
 
-        url = uri("https://cache.eu-central-a.buildfetch.com/WVl8kn/gradle/")
+        url = uri("https://cache.bf-follower-hz-eu-fsn1-1-beta.buildfetch.com/90hv4D/gradle/")
 
         credentials {
             username = "token-auth"
@@ -31,6 +31,8 @@ buildCache {
         }
 
         isPush = providers.gradleProperty("flipper_buildfetch_write_enabled").orNull.toBoolean()
+
+        System.err.println("ARTEM: isEnabled=$isEnabled, isPush=$isPush")
     }
 }
 

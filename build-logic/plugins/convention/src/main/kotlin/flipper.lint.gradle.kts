@@ -7,12 +7,11 @@ plugins {
 tasks.register<Detekt>("detektFormat") {
     autoCorrect = true
     ignoreFailures = true
+    // autoCorrect mutates sources (inputs); caching would restore reports without reformatting
+    outputs.cacheIf { false }
 }
 
 tasks.withType<Detekt> {
-    // Disable caching
-    outputs.upToDateWhen { false }
-
     reports {
         html.required.set(true)
         checkstyle.required.set(false)
