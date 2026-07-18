@@ -31,6 +31,8 @@ buildCache {
         }
 
         isPush = providers.gradleProperty("flipper_buildfetch_write_enabled").orNull.toBoolean()
+
+        System.err.println("ARTEM: isEnabled=$isEnabled, isPush=$isPush")
     }
 }
 
